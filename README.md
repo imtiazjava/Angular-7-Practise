@@ -9,4 +9,21 @@
 ### >ng g c child
 ## Step2: Inside the app.component.ts write the following code:
 
+```
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'emsapp';
+  messageFromParent="How are You Child?";
+  messageFromChild="";
+  getData(value){
+   this.messageFromChild=value;
+  }
+}
+
+```
